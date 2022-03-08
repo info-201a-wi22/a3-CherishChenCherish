@@ -1,0 +1,35 @@
+---
+title: "index"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("../source/analysis.R")
+
+```
+
+
+## Introduction
+
+
+## Summary Description
+The average total tail population for all the counties is `r round(avg_total_jail_pop, 2)`, the highest total tail population occured in `r highest_record$county_name`, `r highest_record$state`, the value is `r round(highest_record$total_jail_pop)`. The lowest total tail population occured in `r lowest_record$county_name`, `r lowest_record$state`, the value is `r lowest_record$total_jail_pop`.
+
+
+## Trend Over Time
+```{r echo=F}
+plot1
+```
+
+
+## Comparing
+```{r echo=F}
+plot2
+```
+
+## Map
+```{r echo=F}
+plot3
+```
+
